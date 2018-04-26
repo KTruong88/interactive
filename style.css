@@ -1,0 +1,22 @@
+* {
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.sky {
+  background-color: midnightblue;
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #302b63);
+  width: 200%;
+  min-height: 100vh;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.mountains {
+  width: 200%;
+  height
+}
