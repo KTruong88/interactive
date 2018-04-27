@@ -154,6 +154,7 @@
   width: 220px;
   height: 100px;
   background-color: #bd300d;
+  margin-bottom: 100px;
 }
 
 .banner-bar {
@@ -163,10 +164,77 @@
   align-self: center;
 }
 
+.banner-bar2 {
+  position: absolute;
+  z-index: 200;
+  width: 302px;
+  top: 465px;
+  left: 494px;
+}
+
 .banner {
   height: 100px;
   width: 13px;
   background-color: skyblue;
+}
+
+.building-color-sm {
+  z-index: 200;
+  position: absolute;
+  height: 145px;
+  width: 286px;
+  background-color: #b46400;
+  top: 470px;
+  left: 510px;
+}
+
+.brick-wrap2 {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.brick-build {
+  z-index: 200;
+  height: 6px;
+  width: 10px;
+  background-color: #b46400;
+  border: .5px solid black;
+}
+
+.brick-build-long {
+  height: 6px;
+  width: 14px;
+}
+
+.window-wrap-brick {
+  z-index: 300;
+  margin-top: -120px;
+  display: flex;
+  width: 270px;
+  justify-content: space-between;
+}
+
+.window-wrap-brick2 {
+  position: absolute;
+  width: 50px;
+  margin-top: 110px;
+  left: 30px;
+}
+
+.window-wrap-brick3 {
+  left: 205px;
+}
+
+.brick-door-wrap {
+  display: flex;
+  margin-top: -50px;
+}
+.brick-door {
+  z-index: 300;
+  width: 30px;
+  height: 50px;
+  background-color: #72df9a;
+  border: 1px solid #fff;
 }
 
 
