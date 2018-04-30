@@ -294,7 +294,7 @@ body {
   background-color: gray;
   border: 2px solid black;
   top: 200px;
-  left: 110px;
+  left: 108px;
 }
 
 .factory-door-top2 {
@@ -442,21 +442,83 @@ body {
   border-radius: 50%;
 }
 
+.car {
+  z-index: 1000;
+  position: absolute;
+  top: 490px;
+  background: url("../images/car.png");
+  width: 128px;
+  height: 110px;
+  animation: drive 35s linear;
+}
+
+.baloons {
+  z-index: 900;
+  position: absolute;
+  height: 20px;
+  width: 15px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  top: 390px;
+  left: 35px;
+  color: white;
+  font-family: arial;
+}
+
+.string {
+  z-index: 900;
+  position: relative;
+  height: 30px;
+  width: 1px;
+  background-color: gray;
+}
+
+.js {
+  opacity: 0;
+  font-family: arial;
+  color: green;
+  animation: fade-in 1s, fall 4s;
+  animation-delay: 3s;
+}
+
+
 /* KEYFRAMES */
+
 @keyframes wind {
   0% {
     transform: translateX(300px);
   }
   100% {
     transform: translateX(-1300px);
-    }
   }
+}
 
-@keyframes medium {
+@keyframes drive {
   0% {
     transform: translateX(-200px);
   }
   100% {
-    transform: translateX(-1500px);
-    }
+    transform: translateX(1450px);
   }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(320px);
+  }
+}
