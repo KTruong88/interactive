@@ -231,7 +231,15 @@ body {
   margin-top: -50px;
 }
 
-.brick-door {
+.brick-door1 {
+  z-index: 300;
+  width: 30px;
+  height: 50px;
+  background-color: #72df9a;
+  border: 1px solid #fff;
+}
+
+.brick-door2 {
   z-index: 300;
   width: 30px;
   height: 50px;
@@ -443,26 +451,13 @@ body {
 }
 
 .car {
-  z-index: 1000;
   position: absolute;
+  z-index: 1000;
   top: 490px;
   background: url("../images/car.png");
   width: 128px;
   height: 110px;
   animation: drive 35s linear;
-}
-
-.baloons {
-  z-index: 900;
-  position: absolute;
-  height: 20px;
-  width: 15px;
-  background-color: lightgreen;
-  border-radius: 50%;
-  top: 390px;
-  left: 35px;
-  color: white;
-  font-family: arial;
 }
 
 .string {
@@ -476,11 +471,41 @@ body {
 .js {
   opacity: 0;
   font-family: arial;
-  color: green;
-  animation: fade-in 1s, fall 4s;
-  animation-delay: 3s;
+  font-weight: bold;
+  color: black;
+  animation: fade-in 1s, fall 4.5s;
+  animation-delay: 3.2s;
 }
 
+.person-in-window {
+  opacity: 0;
+  animation: fade-in 3s ease-out;
+  animation-delay: 2s;
+}
+
+.brick-door1 {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  animation: swing-left 5s ease;
+}
+
+.inside {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  background-color: black;
+  z-index: 300;
+  width: 60px;
+  height: 50px;
+}
+
+.brick-door2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  animation: swing-right 5s ease;
+}
 
 /* KEYFRAMES */
 
@@ -519,6 +544,32 @@ body {
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(320px);
+    transform: translateY(380px);
+  }
+}
+
+@keyframes swing-left {
+  0% {
+    transform: rotateY(0px);
+  }
+  50% {
+    transform: rotateY(85deg);
+    transform-origin: left;
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes swing-right {
+  0% {
+    transform: rotateY(0px);
+  }
+  50% {
+    transform: rotateY(85deg);
+    transform-origin: right;
+  }
+  100% {
+    transform: rotateY(0deg);
   }
 }
