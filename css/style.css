@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  min-height: 100vh;
   width: 1442px;
   overflow-y: scroll;
   overflow-x: scroll;
@@ -456,6 +457,7 @@ body {
   top: 490px;
   background: url("../images/car.png");
   width: 128px;
+  min-height: 110px;
   height: 110px;
   animation: drive 35s linear;
 }
@@ -487,24 +489,40 @@ body {
   position: absolute;
   top: 60%;
   left: 40%;
-  animation: swing-left 5s ease;
-}
-
-.inside {
-  position: absolute;
-  top: 60%;
-  left: 40%;
-  background-color: black;
-  z-index: 300;
-  width: 60px;
-  height: 50px;
+  animation: swing-left 7s ease;
+  animation-delay: 8s;
 }
 
 .brick-door2 {
   position: absolute;
   top: 60%;
   left: 50%;
-  animation: swing-right 5s ease;
+  animation: swing-right 7s ease;
+  animation-delay: 8s;
+}
+
+.inside {
+  position: absolute;
+  background: url("../images/vortex.png");
+  background-size: cover;
+  top: 60%;
+  left: 40%;
+  z-index: 300;
+  width: 60px;
+  height: 50px;
+}
+
+.ruby {
+  position: absolute;
+  z-index: 400;
+  opacity: 0;
+  font-family: arial;
+  color: white;
+  top: 45%;
+  left: 43%;
+  font-weight: bold;
+  animation: jump 1s, fade-in 1s, drop 2s;
+  animation-delay: 11s;
 }
 
 /* KEYFRAMES */
@@ -571,5 +589,38 @@ body {
   }
   100% {
     transform: rotateY(0deg);
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+
+@keyframes jump {
+  0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+  40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+  100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+}
+
+@media only screen and (max-width: 500px) {
+  .car {
+    top: 470px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .car {
+    top: 420px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .car {
+    top: 380px;
   }
 }
